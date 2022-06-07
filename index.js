@@ -9,9 +9,9 @@ client.commands = new Collection();
 
 
 
-const commandFiles = readdirSync('./command').filter(file => file.endsWith('.js'));
+const commandFiles = readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
-	const command = require(`./command/${file}`);
+	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
 	}
 
